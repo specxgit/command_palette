@@ -219,24 +219,47 @@ body {
 .mobile-menu-btn {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 16px;
+    left: 16px;
     background-color: #3b82f6;
     color: white;
     border: none;
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
     z-index: 1000;
-    font-size: 24px;
+    font-size: 20px;
     transition: all 0.2s;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-menu-btn:hover {
     background-color: #2563eb;
-    transform: scale(1.05);
+}
+
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 999;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-header-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-left: 60px;
 }
 
 .mobile-overlay {
@@ -258,6 +281,15 @@ body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
     }
 
     .sidebar {
@@ -271,25 +303,42 @@ body {
 
     .sidebar.open {
         transform: translateX(0);
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
     }
 
     .main-content {
-        padding: 20px 16px;
-        padding-bottom: 100px; /* Space for mobile menu button */
+        padding: 20px 12px;
     }
 
     .content-title {
-        font-size: 24px;
+        font-size: 22px;
+    }
+
+    .content-subtitle {
+        font-size: 14px;
     }
 
     .commands-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
-    .mobile-menu-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .command-card {
+        padding: 14px;
+    }
+
+    .command-code {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+
+    .command-description {
+        font-size: 12px;
+    }
+
+    .tag {
+        font-size: 10px;
+        padding: 3px 6px;
     }
 }
 
@@ -319,14 +368,46 @@ body {
     }
 
     .content-subtitle {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    .content-header {
+        margin-bottom: 16px;
+    }
+
+    .commands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
     .command-card {
-        padding: 16px;
+        padding: 12px;
     }
 
     .command-code {
-        font-size: 12px;
+        font-size: 10px;
+        padding: 6px 8px;
+        margin-right: 24px;
+    }
+
+    .command-description {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .copy-icon {
+        width: 16px;
+        height: 16px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .tag {
+        font-size: 9px;
+        padding: 2px 5px;
+    }
+
+    .mobile-header-title {
+        font-size: 16px;
     }
 }

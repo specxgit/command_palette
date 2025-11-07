@@ -158,6 +158,12 @@ function selectCategory(category) {
     renderNavigation();
     renderCommands();
     
+    // Update mobile header title
+    const mobileHeaderTitle = document.getElementById('mobileHeaderTitle');
+    if (mobileHeaderTitle) {
+        mobileHeaderTitle.textContent = categories[category].name;
+    }
+    
     // Close mobile menu when category is selected
     if (window.innerWidth <= 768) {
         closeMobileMenu();
