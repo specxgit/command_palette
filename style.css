@@ -219,9 +219,8 @@ body {
 .mobile-menu-btn {
     display: none;
     position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    top: 8px;
+    left: 8px;
     background-color: #3b82f6;
     color: white;
     border: none;
@@ -251,7 +250,6 @@ body {
     background-color: white;
     border-bottom: 1px solid #e5e7eb;
     z-index: 1000;
-    align-items: center;
     padding: 0 16px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -260,7 +258,8 @@ body {
     font-size: 18px;
     font-weight: bold;
     color: #1f2937;
-    margin-left: 60px;
+    margin-left: 52px;
+    line-height: 60px;
 }
 
 .mobile-overlay {
