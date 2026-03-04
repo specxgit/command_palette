@@ -46,6 +46,23 @@ body {
     padding: 0 12px;
 }
 
+.nav-section-title {
+    margin: 8px 4px 4px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+}
+
+.nav-section-title .nav-icon {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
 .nav-button {
     width: 100%;
     text-align: left;
@@ -60,6 +77,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.nav-sub-button {
+    padding-left: 28px;
 }
 
 .nav-button:hover:not(.active) {
@@ -122,8 +143,9 @@ body {
 /* Commands Grid */
 .commands-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 16px;
+    /* Use horizontal space first, then wrap */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
 }
 
 .command-card {
@@ -345,7 +367,7 @@ body {
 /* Tablet Responsive */
 @media (max-width: 1024px) and (min-width: 769px) {
     .commands-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 
     .main-content {
@@ -376,8 +398,9 @@ body {
     }
 
     .commands-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        /* Single column on very small screens for readability */
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .command-card {
